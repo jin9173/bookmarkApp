@@ -1,9 +1,11 @@
-from django.shortcuts import render
+from django.views.generic import ListView, DetailView
+
+from bookmark.models import Bookmark
 
 
-class BookmarkLV():
-    pass
+class BookmarkLV(ListView):
+    model = Bookmark
 
 
-class BookmarkDV():
-    pass
+class BookmarkDV(DetailView):
+    model = Bookmark
